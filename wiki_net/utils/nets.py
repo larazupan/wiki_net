@@ -10,7 +10,7 @@ def link_network(pages, fname):
     n = len(pages)**2
     for i, (page1, page2) in enumerate(product(pages, repeat=2)):
         if i % 1000 == 0:
-            print 'Processed: %d/%d' % (i, n)
+            print('Processed: %d/%d' % (i, n))
         if page1 == page2 or not hasattr(page2, 'links'):
             continue
         if page1.title in page2.links:
