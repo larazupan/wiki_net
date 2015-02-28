@@ -85,7 +85,7 @@ def pages_from_ids(id2pages, dump_path=None):
     if dump_path:
         for page in pages:
             path = join(dump_path, '%s.pkl' % page.pageid)
-            pickle.dump(page, open(path, 'w'))
+            pickle.dump(page, open(path, 'wb'))
     return pages
 
 
@@ -94,7 +94,7 @@ def unpickle_pages(path):
     for fname in os.listdir(path):
         if not fname.endswith('.pkl'):
             continue
-        f = open(join(path, fname))
+        f = open(join(path, fname), 'rb')
         page = pickle.load(f)
         f.close()
         pages.append(page)
