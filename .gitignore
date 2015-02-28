@@ -5,6 +5,9 @@
 # Ignore project files
 *.pyproj
 
+# Ignore dot files
+.*
+
 # Ignore backup files.
 *.orig
 *.bak
